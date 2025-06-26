@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <h1 class="titulo text-center">{{ texts.titulo_como_chegar }}</h1>
+  <p class="text-justify">{{ texts.conteudo_como_chegar }}</p>
+
+  <!-- Mapa com a rota -->
+  <div class="mapa-container text-center my-4">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d15809.963498711598!2d-35.58536675699826!3d-8.23257929593861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x7aa9b6f353f8437%3A0x3dcf403452ebba2f!2sRecife%2C%20PE!3m2!1d-8.0475622!2d-34.8770013!4m5!1s0x7a9879bbf861dbf%3A0x1c49fbc9ce4edfe2!2sBezerros%2C%20PE!3m2!1d-8.2319301!2d-35.7974069!5e0!3m2!1spt-BR!2sbr!4v1718122349584!5m2!1spt-BR!2sbr"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+{% endblock %}

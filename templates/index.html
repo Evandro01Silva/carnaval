@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1 class="titulo">{{ texts.titulo_index }}</h1>
+    <p class="subtitulo">{{ texts.subtitulo_index }}</p>
+    <p class="conteudo">{{ texts.conteudo_index }}</p>
+
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='images/papangus-8.jpg') }}" class="img-fluid rounded shadow my-3" alt="Papangus no Carnaval de Bezerros">
+    </div>
+    
+    <div class="container my-4">
+        <div class="video-limit mx-auto">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/_5qJNUVFiTk?si=lF0-EkmZd63HzOJ4"
+                    title="Os papangus de Bezerros"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

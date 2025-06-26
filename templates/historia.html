@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1 class="titulo">{{ texts.titulo_historia }}</h1>
+    <p class="conteudo">{{ texts.conteudo_historia }}</p>
+
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='images/papangus-6.jpg') }}" class="img-fluid rounded shadow my-3" alt="Papangus no Carnaval de Bezerros">
+    </div>
+{% endblock %}

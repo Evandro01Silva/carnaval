@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1 class="titulo">{{ texts.titulo_galeria }}</h1>
+  <p class="subtitulo">{{ texts.descricao_galeria }}</p>
+
+  <!-- Grid de imagens -->
+  <div class="container">
+    <div class="row g-3">
+      {% for i in range(0, 8) %}
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="{{ url_for('static', filename='images/papangus-' ~ i ~ '.jpg') }}"
+               alt="Foto {{ i }}"
+               class="img-fluid rounded shadow foto-grid"
+               onclick="abrirImagem(this.src)">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Modal para imagem em tela cheia -->
+  <div class="modal fade" id="imagemModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center align-items-center">
+          <img id="imagemExpandida" class="img-fluid rounded shadow" alt="Imagem em tela cheia">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+        <div class="video-limit mx-auto">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/GdVTH-02big?si=d-3kJdKnwlvL_d_n"
+                    title="Carnaval do papangu 2025"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="video-limit mx-auto">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/GIwPbUHtC0Q?si=IoJqpw8wBClmdEyK"
+                    title="Carnaval de Bezerros PE 2024"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="video-limit mx-auto">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/up9R6b6ADvs?si=gEid5fiO2KQ3bZmP"
+                    title="Domingo de Carnaval em Bezerros. A Terra do Papangu"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="video-limit mx-auto">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/F8FTkE6VwGY?si=eQRsaOSIygij7B7h"
+                    title="Carnaval de Bezerros PE 2022 | Confira!"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}
